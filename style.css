@@ -308,3 +308,170 @@ footer button.show{
     color: #fff;
     background: #007bff;
 }
+
+
+
+/* Media responsive */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .quiz_box{
+        /* width: 550px; */
+        width: 200px;
+    }
+    section .que_text{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    section .option_list .option{
+        font-size: 10px;
+    }
+    .correct_ans{
+        font-size: 10px;
+        font-weight: 300px;
+    }
+    footer .total_que span p{
+        font-size: 10px;
+    }
+    footer .total_que span{
+        font-size: 10px;
+    }
+    footer{
+        height: 70px;
+        padding: 5px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        border-top: 1px solid lightgrey;
+    }
+    footer button{
+        height: 30px;
+        padding: 0 13px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    .result_box{
+        padding: 25px 30px;
+        width: 205px;
+    }
+    
+    .result_box .icon{
+        font-size: 50px;
+    }
+    
+    .result_box .complete_text{
+        font-size: 15px;
+    }
+    
+    .result_box .score_text span{
+        font-size: 15px;
+    }
+    .result_box .buttons{
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    
+    .result_box .buttons button{
+        font-size: 12px;
+    }
+    
+    .buttons button.restart{
+        margin-bottom: 5px;
+    }
+    
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+     .quiz_box{
+         width: 300px;
+     }
+    section .que_text{
+        font-size: 15px;
+        font-weight: 600;
+    }
+    section .option_list .option{
+        font-size: 15px;
+    }
+    .correct_ans{
+        font-size: 12px;
+        font-weight: 300px;
+    }
+    footer{
+        height: 60px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid lightgrey;
+    }
+    footer button{
+        height: 40px;
+        padding: 0 13px;
+        font-size: 15px;
+        font-weight: 400;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .quiz_box{
+        width: 400px;
+    }
+    section .que_text{
+        font-size: 25px;
+        font-weight: 600;
+    }
+    section .option_list .option{
+        font-size: 17px;
+    }
+    .correct_ans{
+        font-size: 17px;
+        font-weight: 400;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    footer{
+        height: 60px;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid lightgrey;
+    }
+    footer button{
+        height: 40px;
+        padding: 0 13px;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 5px;
+        background: #007bff;
+        border: 1px solid #007bff;
+        line-height: 10px;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.95);
+        transition: all 0.3s ease;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .quiz_box{
+        width: 500px;
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .quiz_box{
+        width: 600px;
+    }
+  }
