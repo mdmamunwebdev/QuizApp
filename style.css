@@ -24,14 +24,16 @@ body{
 
 .quiz_box.activeQuiz,
 .result_box.activeResult{
-    opacity: 1;
+    /* opacity: 1; */
+    display: block;
     pointer-events: auto;
 }
 
 .quiz_box{
     background: #fff;
     border-radius: 5px;   
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     pointer-events: none;
     transition: all 0.3s ease;
 }
@@ -175,7 +177,8 @@ section .option_list .option .icon{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     pointer-events: none;
     transition: all 0.3s ease;
 }
