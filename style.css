@@ -11,11 +11,6 @@ body{
     background: #8c9094;
 }
 
-::selection {
-    color: #fff;
-    background: #3d3e41;
-}
-
 .quiz_box,
 .result_box{
     width: 500px;
@@ -244,18 +239,23 @@ section .option_list .option .icon{
     background: #007bff;
 }
 
+
+
+/* Media Responsive */
 @media only screen and (max-width: 768px) {
     .quiz_box,
     .result_box {
         width: 100%;
         margin-top: 0;
     }
+
     .result_box .buttons{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     .buttons button.restart{
         margin-bottom: 5px;
     }
