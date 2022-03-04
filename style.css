@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 body{
@@ -40,7 +41,7 @@ section{
 
 section .que_text{
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 section .option_list{
@@ -54,6 +55,7 @@ section .option_list .option{
     border-radius: 5px;
     padding: 8px 15px;
     font-size: 17px;
+    font-weight: 400;
     margin-bottom: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -201,7 +203,7 @@ section .option_list .option .icon{
 
 .result_box .score_text span p{
     padding: 0 4px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .result_box .buttons{
