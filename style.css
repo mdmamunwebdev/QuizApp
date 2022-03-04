@@ -165,7 +165,7 @@ section .option_list .option .icon{
 .result_box{
     background: #fff;
     border-radius: 5px;
-    padding: 25px 25px;
+    padding: 25px 30px;
     display: none;
     pointer-events: none;
     transition: all 0.3s ease;
