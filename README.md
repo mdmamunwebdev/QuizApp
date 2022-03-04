@@ -1,2 +1,1 @@
-# Quiz-App
-# Demo :- (https://mdmamunwebdev.github.io/QuizApp/)
+# Quiz-App Demo :- ( https://mdmamunwebdev.github.io/QuizApp/ )
