@@ -3,7 +3,6 @@ const result_box = document.querySelector(".result_box");
 const option_list = document.querySelector(".option_list");
 const correct_ans = document.querySelector(".correct_ans");
 
-
 window.addEventListener('load', () => {
     loadQuiz()
 });
@@ -45,6 +44,7 @@ const bottom_ques_counter = document.querySelector(".quiz_action .total_que");
 next_btn.onclick = () => {
     if (que_count < questions.length - 1) {
         correct_ans.innerHTML = "";
+        que_count++;
         que_numb++;
         showQuetions(que_count);
         queCounter(que_numb);
@@ -132,7 +132,6 @@ function showResult() {
 }
 
 function queCounter(index) {
-
     let totalQueCounTag = '<span><p>' + index + '</p> of <p>' + questions.length + '</p> Questions</span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;
 }
