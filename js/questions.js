@@ -18,7 +18,7 @@ let questions = [
       "A . Common Style Sheet",
       "B . Colorful Style Sheet",
       "C . Computer Style Sheet",
-      "D. Cascading Style Sheet"
+      "D . Cascading Style Sheet",
     ]
   },
   {
@@ -73,7 +73,7 @@ let questions = [
       "A . Common Style Sheet",
       "B . Colorful Style Sheet",
       "C . Computer Style Sheet",
-      "D. Cascading Style Sheet"
+      "D . Cascading Style Sheet",
     ]
   },
   {
