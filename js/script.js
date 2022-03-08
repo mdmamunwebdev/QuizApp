@@ -60,8 +60,8 @@ function showQuetions(index) {
     let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
     let option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
         + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
-        + '<div class="option"><span>' + questions[index].options[2] + '</span></div>'
-        + '<div class="option"><span>' + questions[index].options[3] + '</span></div>';
+        + '<div class="option"><span>' + questions[index].options[2] + '</span></div>';
+       
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
 
@@ -78,6 +78,8 @@ let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 function optionSelected(answer) {
     let userAns = answer.textContent;
     let correcAns = questions[que_count].answer;
+    let shortcorrectAns = questions[que_count].sc_answer;
+    let ansExplanation =  questions[que_count].additional;
     const allOptions = option_list.children.length;
 
     if (userAns == correcAns) {
@@ -87,7 +89,7 @@ function optionSelected(answer) {
     } else {
         answer.classList.add("incorrect");
         answer.insertAdjacentHTML("beforeend", crossIconTag);
-        correct_ans.innerHTML = "Your correct answers :- " + correcAns;
+        correct_ans.innerHTML = "<div class='correct_ans_title'> Die richtige Antwort ist " + shortcorrectAns +"</div><div class='correct_ans_exp'>"+ ansExplanation +"</div>";
 
         for (i = 0; i < allOptions; i++) {
             if (option_list.children[i].textContent == correcAns) {
@@ -127,6 +129,6 @@ function showResult() {
 }
 
 function queCounter(index) {
-    let totalQueCounTag = '<span><p>' + index + '</p> of <p>' + questions.length + '</p> Questions</span>';
+    let totalQueCounTag = '<span><p>' + index + '</p> / <p>' + questions.length + '</p></span>';
     bottom_ques_counter.innerHTML = totalQueCounTag;
 }
