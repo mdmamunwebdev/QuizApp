@@ -58,17 +58,18 @@ function showQuetions(index) {
     const que_text = document.querySelector(".que_text");
 
     let que_tag = '<span>' + questions[index].numb + ". " + questions[index].question + '</span>';
-    let option_tag = '<div class="option"><span>' + questions[index].options[0] + '</span></div>'
-        + '<div class="option"><span>' + questions[index].options[1] + '</span></div>'
-        + '<div class="option"><span>' + questions[index].options[2] + '</span></div>';
+    let option_tag = 
+          '<div class="option"><span class="opt_simble">A</span><span class="opt_ans">' + questions[index].options[0] + '</span></div>'
+        + '<div class="option"><span class="opt_simble">B</span><span class="opt_ans">' + questions[index].options[1] + '</span></div>'
+        + '<div class="option"><span class="opt_simble">C</span><span class="opt_ans">' + questions[index].options[2] + '</span></div>';
        
     que_text.innerHTML = que_tag;
     option_list.innerHTML = option_tag;
 
-    const option = option_list.querySelectorAll(".option");
+    const option = option_list.querySelectorAll(".opt_ans");
 
     for (i = 0; i < option.length; i++) {
-        option[i].setAttribute("onclick", "optionSelected(this)");
+        option[i].parentElement.setAttribute("onclick", "optionSelected(this)");
     }
 }
 
@@ -76,11 +77,14 @@ let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
 function optionSelected(answer) {
-    let userAns = answer.textContent;
+    let userAns = answer.children[1].textContent;
     let correcAns = questions[que_count].answer;
     let shortcorrectAns = questions[que_count].sc_answer;
     let ansExplanation =  questions[que_count].additional;
     const allOptions = option_list.children.length;
+
+     console.log( 'answer'+ userAns );
+     console.log( 'allOptions'+ allOptions );
 
     if (userAns == correcAns) {
         userScore += 1;
@@ -92,7 +96,7 @@ function optionSelected(answer) {
         correct_ans.innerHTML = "<div class='correct_ans_title'> Die richtige Antwort ist " + shortcorrectAns +"</div><div class='correct_ans_exp'>"+ ansExplanation +"</div>";
 
         for (i = 0; i < allOptions; i++) {
-            if (option_list.children[i].textContent == correcAns) {
+            if (option_list.children[i].children[1].textContent == correcAns) {
                 option_list.children[i].setAttribute("class", "option correct");
                 option_list.children[i].insertAdjacentHTML("beforeend", tickIconTag);
             }
